@@ -6,7 +6,7 @@ import { useSnapshot } from "valtio";
 const CustomButton: FC<CustomButtonProps> = ({
   title,
   type,
-  customStyle,
+  customStyles,
   handleClick,
 }) => {
     const snap= useSnapshot(state)
@@ -21,7 +21,7 @@ const CustomButton: FC<CustomButtonProps> = ({
   return (
     <button
       style={genrateStyle(type)}
-      className={`px-2 py-1.5 flex-1 rounded-md ${customStyle}`}
+      className={`px-2 py-1.5 flex-1 rounded-md ${customStyles}`}
       onClick={handleClick}
     >
       {title}

@@ -1,7 +1,7 @@
 export interface CustomButtonProps {
   title: string;
   type: string;
-  customStyle: string;
+  customStyles: string;
   handleClick: () => void;
 }
 export interface TabProps {
@@ -10,10 +10,34 @@ export interface TabProps {
     name: string;
     icon: string;
   };
-  isFilterTab?:null
-  isActiveTab?:string
+  isFilterTab?: boolean;
+  isActiveTab?: boolean;
   handleClick: () => void;
 }
-// export interface ShirtProps{
-//   childern
-// }
+export interface FilePickerProps {
+  file: any;
+  setFile: any;
+  readFile: any;
+}
+export interface DecalType {
+  logo: {
+    stateProperty: string;
+    filterTab: string;
+  };
+  full: {
+    stateProperty: string;
+    filterTab: string;
+  };
+}
+export interface MyState {
+  intro: boolean;
+  color: string;
+  isLogoTexture: boolean;
+  isFullTexture: boolean;
+  logoDecal: string;
+  fullDecal: string;
+  [key: string]: any
+}
+export interface ActiveFilterTab {
+  [key: string]: boolean;
+}

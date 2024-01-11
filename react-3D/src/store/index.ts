@@ -1,6 +1,7 @@
 import { proxy } from "valtio";
+import { MyState } from "../Types";
 
-export  const state = proxy({
+export  const state:MyState = proxy({
   intro: true,
   color: "#EFBD48",
   isLogoTexture: true,

@@ -1,5 +1,6 @@
 export const downloadCanvasToImage = () => {
   const canvas = document.querySelector("canvas");
+  // @ts-ignore
   const dataURL = canvas.toDataURL();
   const link = document.createElement("a");
 
@@ -11,7 +12,7 @@ export const downloadCanvasToImage = () => {
 };
 
 export const reader = (file:any) =>
-  new Promise((resolve, reject) => {
+  new Promise((resolve) => {
     const fileReader = new FileReader();
     fileReader.onload = () => resolve(fileReader.result);
     fileReader.readAsDataURL(file);
